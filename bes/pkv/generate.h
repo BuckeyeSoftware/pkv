@@ -4,6 +4,10 @@
 #include <bes/pkv/hash.h>
 #include <bes/pkv/checksum.h>
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 /* Destination must have 7*n_sub_key+1 space to store the serial */
 void
 bes_pkv_generate(bes_u32 seed,
@@ -14,4 +18,9 @@ bes_pkv_generate(bes_u32 seed,
                  bes_size n_hash_functions,
                  char *destination_,
                  bes_size *destination_length);
+
+#if defined(__cplusplus)
+}
+#endif
+
 #endif

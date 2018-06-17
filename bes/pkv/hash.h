@@ -3,6 +3,10 @@
 
 #include <bes/foundation/types.h>
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 typedef bes_u32 (*bes_pkv_hash_fn)(const bes_byte *const, bes_size);
 
 /* Implementation of the FNV1a hash function */
@@ -28,5 +32,9 @@ bes_pkv_hash_crc32(const bes_byte *const data, bes_size length);
 /* Implementation of Dan Bernstein k=33 hash */
 bes_u32
 bes_pkv_hash_djb2(const bes_byte *const data, bes_size length);
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif

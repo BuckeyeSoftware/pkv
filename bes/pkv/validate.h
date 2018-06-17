@@ -3,6 +3,11 @@
 
 #include <bes/pkv/checksum.h>
 #include <bes/pkv/hash.h>
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
 bes_bool
 bes_pkv_validate_checksum(bes_pkv_checksum_fn checksum_function,
                           const bes_byte *const key,
@@ -15,5 +20,9 @@ bes_pkv_validate_key(bes_pkv_hash_fn hash_function,
                      bes_size key_length,
                      bes_size sub_key_index,
                      bes_u32 sub_key_base);
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif
