@@ -1,0 +1,15 @@
+# Ignore hidden directories but not .gitignore itself.
+.*
+!/.gitignore
+
+# Ignore commonly generated files during build.
+*.o
+*.d
+*.a
+*.so
+*.obj
+*.rsp
+*.lib
+*.dll
+*.pdb
+*.ilk
